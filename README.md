@@ -18,8 +18,24 @@ In this repository, I have four scripts to accomplish the algorithm at hand, and
 
 But what exactly was the problem that I was stumped on so strongly, that actually was quite trivial in the end? Read on.
  
-Explanation
+The Problem
 -----------
+
+Say you have an array of numbers, as shown below.
+
+[ 0 1 2 3 4 ]
+
+You need to write some code that left-shifts the array a specified amount.  
+For example, if you specified a rotation of 2, the new array would be:
+
+[ 2 3 4 0 1 ]
+
+How would you efficiently write code to do this shifting?
+
+> *Something extra:* Say you had a very large amount of data, such as millions of numbers or more. How would you do the left shift with the data then? What practical obstacles would you face in working with that amount of data?
+
+Explanation of the Code
+-----------------------
 
 ### arrayshift1.c
 
