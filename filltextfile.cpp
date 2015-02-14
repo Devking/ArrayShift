@@ -6,7 +6,7 @@
 #define DUMMYGUARD
 // set this to be the number of elements you want in the text file
 // since we talked about 1 million elements today, that's the number i'm using
-// i'm asking using a #define to avoid the bad coding practice of magic numbers
+// i'm using a #define here to avoid the bad coding practice of magic numbers
 #define DUMMYELEMENTS 10000
 #endif
 */
@@ -38,7 +38,7 @@ int main () {
 	for (int i = 0; i < DUMMYELEMENTS; i++)
 		dummyData << i << ',';
 
-	// add the millionth element, with no final comma
+	// add the final element, with no final comma
 	dummyData << DUMMYELEMENTS;
 
 	// close the file, for good measure

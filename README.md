@@ -1,5 +1,5 @@
-Array Shift Code
-=================
+Array Left-Shift Algorithm
+==========================
 
 Motivation
 ----------

@@ -49,7 +49,7 @@ int main () {
 
 	ofstream dummyShift("dataShifted.txt");
 
-	// Put the rest of the elements in the text file to the new text file
+	// Put the rest of the elements from the old text file to the new text file
 
 	while (getline(dummyData, value, ',')) {
 		#ifdef DEBUG
