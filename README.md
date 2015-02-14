@@ -52,9 +52,13 @@ Once I sat down at the computer, equipped with the benefit of time and lack of i
 Explanation of the Code
 -----------------------
 
-[ still editing ]
+I came up with four scripts to accomplish the left shift for elements.
 
-There's no point in hiding my code from others. If I'm a bad coder, I need to know it. The more people who critique my work, the more I will actually be able to learn from my mistakes and grow. That's really the best approach to becoming more technically skilled in my mind, since I rather do stupid things in my leisure than during a technical interview or when I'm actually on a team facing a deadline. *Everyone has to start somewhere, and more often than not, it takes hundreds of programs of shitty code critiqued by others to learn how to be a good coder.*
+Originally, I came up with two solutions in C++, but I realized that one was simple enough to implement in C, so that's where the first script (arrayshift1.c) comes from. The second script (arrayshift2.cpp) is really just a straight-forward, brute-force method of approach. The third script is written in Python, since it has a pretty trivial way of solving the problem, and it was good practice on my part to get more familiar with a scripting language. Finally, to deal with the issue of large quantities of data (upwards of a million elements), I wrote a script in C++ (arrayshift4.cpp) to work with text files and minimize use of space allocation on the stack.
+
+I explain each script in more detail below.
+
+Furthermore, there's no point in hiding my code from others. If I'm a bad coder, I need to know it. The more people who critique my work, the more I will actually be able to learn from my mistakes and grow. That's really the best approach to becoming more technically skilled in my mind, since I rather do stupid things in my leisure than during a technical interview or when I'm actually on a team facing a deadline. *Everyone has to start somewhere, and more often than not, it takes hundreds of programs of shitty code critiqued by others to learn how to be a good coder.*
 
 With this philosophy in mind, I've posted this repository with my code here for all to see. **I encourage my friends and colleagues to take a look at my code (and run it, if you wish). I am open to suggestions as well as comments.**
 
