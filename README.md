@@ -39,7 +39,7 @@ My Initial Thoughts
 
 Since I've very recently worked on embedded programming (of which I actually have code for in a different repository on GitHub), the first thing that came to mind is the fact that this sounds like an easy problem to resolve using circular arrays. When operating within the paradigm of that 'data structure', the logical thing (for me, at least) is to think of arithmetic operations (namely modular arithmetic) to get the indices shifted over properly.
 
-In my mind, all I needed to do was `index - shiftamount % arraysize`. Nothing crazy.
+In my mind, all I needed to do was `(index - shiftamount) % arraysize`. Nothing crazy.
 
 However, it's a bit more complicated than that to actually implement it. I originally did not want to use a second array, so I tried writing the elements to the back while reading the elements from the front. For obvious reasons, that was a no-go.
 
@@ -51,6 +51,15 @@ Once I sat down at the computer, equipped with the benefit of time and lack of i
 
 Explanation of the Code
 -----------------------
+
+Script Name | Script Language | Time Complexity | Space Complexity
+----------- | --------------- | --------------- | ----------------
+arrayshift1 |               C |            O(n) |             O(n)
+arrayshift2 |             C++ |            O(n) |             O(n)
+arrayshift3 |          Python |            ???  |             O(n)
+arrayshift4 |             C++ |            O(n) |             O(s)
+
+> 's' in the last algorithm denotes the amount you wish to shift by.
 
 ### arrayshift1.c
 
