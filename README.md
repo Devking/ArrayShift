@@ -68,11 +68,11 @@ Script Name | Script Language | Time Complexity | Space Complexity
 ----------- | --------------- | --------------- | ----------------
 arrayshift1 |               C |            O(n) |             O(n)
 arrayshift2 |             C++ |            O(n) |             O(n)
-arrayshift3 |          Python |            ???  |             O(n)
+arrayshift3 |          Python |            O(n) |             O(n)
 arrayshift4 |             C++ |            O(n) |             O(s)
+arrayshift5 |             C++ |            O(s) |             O(n)
 
-> Note: 's' in the last algorithm denotes the amount you wish to shift by.  
-Also, since I'm not too familiar in Python with list slicing, I'm not entirely sure what the true runtime of that script would be. (Constant time seems possible, if the language and architecture allowed for it, but it sounds wrong in my mind.)
+> Note: 's' in the last two algorithms denote the amount you wish to shift by.  
 
 ### arrayshift1.c
 
@@ -112,3 +112,9 @@ Finally, the most interesting script of all is the one that works with a left sh
 (For instance, say we desire shifting by 100 elements out of a set of 1,000,000 elements. The other algorithms would require storing those 1,000,000 elements on the stack, while this algorithm only requires storing 100 elements on the stack.)
 
 I do wish to figure out a better method of doing this, that doesn't require using the vector, of course. Dealing with file I/O in C++ hasn't been my specialty, but this is definitely a good way to practice it.
+
+### arrayshift5.cpp
+
+I decided to add this one in, just because it was the obvious "no-duh" answer that used a `deque<int>` with `pop_front()` and `push_back()`. Of course, my assumption during the interview was that I'd be limited to an array data structure, but I definitely should have at least brought this one up.
+
+The curious thing with deques is how to count the runtime and space complexity with it. You could make different arguments based on different implementations of deques, and if you're using an implementation with a doubly-linked list, I could see how each `pop_front()` and `push_back()` could be done in constant time. With that being said, a total runtime of `O(s)` would result, blowing everything else out of the water in terms of *theoretical* speed.
