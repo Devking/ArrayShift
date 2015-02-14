@@ -71,8 +71,9 @@ arrayshift2 |             C++ |            O(n) |             O(n)
 arrayshift3 |          Python |            O(n) |             O(n)
 arrayshift4 |             C++ |            O(n) |             O(s)
 arrayshift5 |             C++ |            O(s) |             O(n)
+arrayshift6 |          Python |            O(s) |             O(n)
 
-> Note: 's' in the last two algorithms denote the amount you wish to shift by.  
+> Note: 's' in the last three algorithms denote the amount you wish to shift by.  
 
 ### arrayshift1.c
 
@@ -118,3 +119,9 @@ I do wish to figure out a better method of doing this, that doesn't require usin
 I decided to add this one in, just because it was the obvious "no-duh" answer that used a `deque<int>` with `pop_front()` and `push_back()`. Of course, my assumption during the interview was that I'd be limited to an array data structure, but I definitely should have at least brought this one up.
 
 The curious thing with deques is how to count the runtime and space complexity with it. You could make different arguments based on different implementations of deques, and if you're using an implementation with a doubly-linked list, I could see how each `pop_front()` and `push_back()` could be done in constant time. With that being said, a total runtime of `O(s)` would result, blowing everything else out of the water in terms of *theoretical* speed.
+
+### arrayshift6.cpp
+
+It also comes to my attention (with thanks of my good friend Kevin Chung) that lists in Python have the capabilities of deques as well, which makes life incredibly easier. As opposed to having to use list slicing, which takes time and space, you can just call `array.append(array.pop(0))` in a loop just as you would in C++ with the deque approach.
+
+Again, not sure how far from the bounds of the question I'd be going by using the deque approach, but since the list is one of the most fundamental structures in Python to use, I'm sure this would be entirely valid and extremely efficient as well. So it was worth coding up to see it work.
