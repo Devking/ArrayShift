@@ -34,6 +34,21 @@ How would you efficiently write code to do this shifting?
 
 > *Something extra:* Say you had a very large amount of data, such as millions of numbers or more. How would you do the left shift with the data then? What practical obstacles would you face in working with that amount of data?
 
+My Initial Thoughts
+-------------------
+
+Since I've very recently worked on embedded programming (of which I actually have code for in a different repository on GitHub), the first thing that came to mind is the fact that this sounds like an easy problem to resolve using circular arrays. When operating within the paradigm of that 'data structure', the logical thing (for me, at least) is to think of arithmetic operations (namely modular arithmetic) to get the indices shifted over properly.
+
+In my mind, all I needed to do was `index - shiftamount % arraysize`. Nothing crazy.
+
+However, it's a bit more complicated than that to actually implement it. I originally did not want to use a second array, so I tried writing the elements to the back while reading the elements from the front. For obvious reasons, that was a no-go.
+
+And then I figured out it would be a lot easier if I used a second array, which was a bit of a disappointment to me, but I tried to work with that. I ended up stumbling around for quite a while, and falling flat on my face when the interviewer asked what would happen if I was given an extremely large set of data.
+
+I knew that it would easily cause a stack overflow, so I couldn't practically work with it all in a single array at once. I had to break it up somehow. But at the time, it was all a mystery to me. He eventually gave me the answer, but by then it was all too late. My time was up, and I had yet struggled to come up with anything tangible (beyond the mathematical equation above, of course).
+
+Once I sat down at the computer, equipped with the benefit of time and lack of in-the-moment pressures, I was able to hack some very simple, silly scripts up to solve the problem at hand. These are explained in the following section.
+
 Explanation of the Code
 -----------------------
 
