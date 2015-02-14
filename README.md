@@ -66,7 +66,7 @@ Also, since I'm not too familiar in Python with list slicing, I'm not entirely s
 
 ### arrayshift1.c
 
-> **Code Golf:** Using my algorithm, this problem really just reduces to a one-liner. When looking at it now, in hindsight, the solution is just so laughably simple that I really wish I wwas able to crank it out on the spot. Here's that one line of code:  
+> **Code Golf:** Using my algorithm, this problem really just reduces to a one-liner at its core. When looking at it now, in hindsight, the solution is just so laughably simple that I really wish I was able to crank it out on the spot. Here's that one line of code:  
 `for (int i = 0; i < size; i++) { arr2[((i - shift) % size + size) % size] = arr[i]; }`
 given that *arr2* is the new array, instantiated to the same size of the first array, *arr*. The way to find size in C is a bit cute as well, which is:  
 ` int size = sizeof(arr) / sizeof(int); `
@@ -74,6 +74,10 @@ given that *arr2* is the new array, instantiated to the same size of the first a
 ### arrayshift2.cpp
 
 ### arrayshift3.py
+
+Of course, Python wins with the most efficient way to type up this algorithm:
+
+` array = array[amount:] + array[:amount] `
 
 ### filltextfile.cpp
 
