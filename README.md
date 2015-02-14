@@ -62,6 +62,8 @@ Furthermore, there's no point in hiding my code from others. If I'm a bad coder,
 
 With this philosophy in mind, I've posted this repository with my code here for all to see. **I encourage my friends and colleagues to take a look at my code (and run it, if you wish). I am open to suggestions as well as comments.**
 
+For added bonus, I've got a nice table below to summarize some basic facts about each algorithm:
+
 Script Name | Script Language | Time Complexity | Space Complexity
 ----------- | --------------- | --------------- | ----------------
 arrayshift1 |               C |            O(n) |             O(n)
@@ -74,6 +76,8 @@ Also, since I'm not too familiar in Python with list slicing, I'm not entirely s
 
 ### arrayshift1.c
 
+This code is extremely straightforward, and is an implementation of the solution I started out with during the interview using modular arithmetic. A few obstacles arose during the writing of this script, including the realization that C/C++ allows for modulo to evaluate to a negative expression (unlike Python, which does what we would normally mathematically expect). I was able to work around this and make a pretty elegant solution.
+
 > **Code Golf:** Using my algorithm, this problem really just reduces to a one-liner at its core. When looking at it now, in hindsight, the solution is just so laughably simple that I really wish I was able to crank it out on the spot. Here's that one line of code:  
 `for (int i = 0; i < size; i++) { arr2[((i - shift) % size + size) % size] = arr[i]; }`
 given that *arr2* is the new array, instantiated to the same size of the first array, *arr*. The way to find size in C is a bit cute as well, which is:  
@@ -81,14 +85,30 @@ given that *arr2* is the new array, instantiated to the same size of the first a
 
 ### arrayshift2.cpp
 
+This is pretty much a brute-force approach that uses vectors instead of arrays to deal with the problem at hand. There's nothing fancy here. This is probably the least elegant and least interesting of these scripts, but it was still worth going through and cranking out. I might sit down and think more deeply about how I could use less space if I were to use the vector data structure.
+
+(Of course, if I used a deque data structure in C++, I could easily just do a series of `pop_front()` and `push_back()` calls to take everything from the front and stick it to the back of the deque. Of course, this would be the absolute easiest/fastest way to do it in C++. However, I wanted to stick to something closer to a simple array to limit myself.)
+
 ### arrayshift3.py
 
 Of course, Python wins with the most efficient way to type up this algorithm:
 
 ` array = array[amount:] + array[:amount] `
 
+I'm not necessarily sure if this would even have been an interesting question for me if I had more experience with lists in Python. A Python coder might find this question completely trivial and laughable, I would suspect.
+
+Of course, Python does come with its disadvantage of speed, since it requires an interpreter, versus C/C++ which can be optimized by a compiler.
+
 ### filltextfile.cpp
 
-You need to run this script first, before running `arrayshift4.cpp`.
+*You need to run this script first, before running `arrayshift4.cpp`.*
+
+This script is here just to (create and) file a text file with as many numbers as the user desires (up to the amount that can be stored by ints, of course). I decided to keep it simple and just stick in the numbers sequentially, but a `Math.random()` sort of thing could definitely have been used to mimic real "Big Data" sets.
 
 ### arrayshift4.cpp
+
+Finally, the most interesting script of all is the one that works with a left shift for large quantities of elements. Nothing really fancy goes on here, except that I go through a single text file and write into a secondary text file at the same time. This code currently does have the constraint of having to store some of the elements in a vector, but that's dramatically less space on the stack than any of the previous three algorithms.
+
+(For instance, say we desire shifting by 100 elements out of a set of 1,000,000 elements. The other algorithms would require storing those 1,000,000 elements on the stack, while this algorithm only requires storing 100 elements on the stack.)
+
+I do wish to figure out a better method of doing this, that doesn't require using the vector, of course. Dealing with file I/O in C++ hasn't been my specialty, but this is definitely a good way to practice it.
