@@ -12,7 +12,7 @@ Nonetheless, I panicked, and ended up coming up with a lot of abstract, theoreti
 
 However, I did have some ideas for approaching this problem, and the interviewer felt that one of my approaches was slightly different from what he had in mind. It would have been a clever algorithm, had I implemented it there. Of course, I panicked and loss all sense of my basic fundamentals, and ended up running out of time. In the end, I asked what his approach would have been, and it was laughably obvious. I beat myself over it for the remainder of the day.
 
-Hours later, after feeling sufficiently disappointed in myself, I ended up sitting down and coding up the problem very thoroughly. I tried to attack it from all angles, finishing up what I had started earlier in the day. This is the product of those efforts.
+Hours later, after feeling sufficiently disappointed in myself, I ended up sitting down and coding up the problem very thoroughly. I tried to attack it from all angles, finishing up what I had started earlier in the day. I wouldn't go down without a fight, and my thirst to deeply understand everything in my path wouldn't let me go. It's probably a bit of my obsessive-compulsiveness that drives me to master everything I don't know. Lack of knowledge scares me, after all. In any case, I ended up working with a few different approaches (and languages) just to push myself to practice my technical skills harder. This is the product of those efforts.
 
 In this repository, I have four scripts to accomplish the algorithm at hand, and one script just for basic set-up. During the interview, my main language of choice was C, which presented some dramatic on-the-spot issues. Although C and C++ are my primary languages, they were not as tidy as scripting languages (especially Python and Matlab in mind). Since there was a much easier way to finish the problem using Python, I sat down and practiced more of that language to get a solution in Python as well. Two other scripts are in C++, and one (my favorite) is in C, since it is simple enough to implement there.
 
@@ -52,6 +52,8 @@ Once I sat down at the computer, equipped with the benefit of time and lack of i
 Explanation of the Code
 -----------------------
 
+[ still editing ]
+
 Script Name | Script Language | Time Complexity | Space Complexity
 ----------- | --------------- | --------------- | ----------------
 arrayshift1 |               C |            O(n) |             O(n)
@@ -59,7 +61,8 @@ arrayshift2 |             C++ |            O(n) |             O(n)
 arrayshift3 |          Python |            ???  |             O(n)
 arrayshift4 |             C++ |            O(n) |             O(s)
 
-> 's' in the last algorithm denotes the amount you wish to shift by.
+> Note: 's' in the last algorithm denotes the amount you wish to shift by.  
+Also, since I'm not too familiar in Python with list slicing, I'm not entirely sure what the true runtime of that script would be. (Constant time seems possible, if the language and architecture allowed for it, but it sounds wrong in my mind.)
 
 ### arrayshift1.c
 
