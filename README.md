@@ -54,6 +54,10 @@ Explanation of the Code
 
 [ still editing ]
 
+There's no point in hiding my code from others. If I'm a bad coder, I need to know it. The more people who critique my work, the more I will actually be able to learn from my mistakes and grow. That's really the best approach to becoming more technically skilled in my mind, since I rather do stupid things in my leisure than during a technical interview or when I'm actually on a team facing a deadline. *Everyone has to start somewhere, and more often than not, it takes hundreds of programs of shitty code critiqued by others to learn how to be a good coder.*
+
+With this philosophy in mind, I've posted this repository with my code here for all to see. **I encourage my friends and colleagues to take a look at my code (and run it, if you wish). I am open to suggestions as well as comments.**
+
 Script Name | Script Language | Time Complexity | Space Complexity
 ----------- | --------------- | --------------- | ----------------
 arrayshift1 |               C |            O(n) |             O(n)
@@ -80,5 +84,7 @@ Of course, Python wins with the most efficient way to type up this algorithm:
 ` array = array[amount:] + array[:amount] `
 
 ### filltextfile.cpp
+
+You need to run this script first, before running `arrayshift4.cpp`.
 
 ### arrayshift4.cpp
